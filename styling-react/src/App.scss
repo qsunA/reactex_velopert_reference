@@ -1,0 +1,29 @@
+@import 'utils';
+
+.box {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border: 1px solid black;
+    position: fixed;
+    @include place-at-center();
+    &.blue{
+        background :orchid;
+    }
+    
+    &:hover{
+        background: red;
+    }
+
+    &:active {
+        background:yellow;
+    }
+
+    // blue를 밑에 넣으니깐 hover/active 등이 동작하지 않았음
+
+    .box-inside {
+        background: black;
+        widows: 50px;
+        height: 50px;
+    }
+  }
